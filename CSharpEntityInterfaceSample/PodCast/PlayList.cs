@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpEntityInterfaceSample.PodCast
 {
-    public class PlayList
+    public class PlayList:BaseModel
     {
         public int SingleCount { get; set; }
     }
