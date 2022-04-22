@@ -12,6 +12,7 @@ namespace CSharpEntityInterfaceSample.PodCast
         {
             
             Single single = new Single("Avici");
+            
         }
     }
 }

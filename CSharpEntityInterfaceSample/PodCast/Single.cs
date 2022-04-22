@@ -18,8 +18,13 @@ namespace CSharpEntityInterfaceSample.PodCast
             get { return ReleaseDate.AddDays(10); }
                 }
         public DateTime RemainingTime { get; set; }
+        public DateTime LastPlayDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         Artist artist { get; set; }
-        
+
+        public void Play(Single singles)
+        {
+            throw new NotImplementedException();
+        }
     }
     
 }

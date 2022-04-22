@@ -8,9 +8,7 @@ namespace CSharpEntityInterfaceSample.PodCast
 {
     public interface IPlay
     {
-        void Play(Single singles)
-        {
-
-        }
+        void Play(Single singles);
+        
     }
 }
