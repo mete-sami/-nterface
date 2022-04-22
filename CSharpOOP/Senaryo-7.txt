@@ -1,0 +1,38 @@
+﻿BaseModel
+
+ID -> string
+AddDate -> DateTime ( default değeri now )
+Renk
+Fiyat
+KDVFiyat ( set edilemez otomatik %18 den hesaplanacak)
+
+
+Ayakkabı -> , IIndirimHesapla
+No
+
+Tshirt -> IBeden, IKumas, IIndirimHesapla
+
+SweatShirt -> IBeden, IKumas, IIndirimHesapla
+
+
+IBeden
+BedenNo
+
+IKumas 
+KumasTur
+
+IIndirimHesapla -> dışarıdan decimal alan ve dışarıya decimal dönen INTERFACE
+
+
+Category -> ( spor, klasik)
+Name
+
+
+Mevsim ( ENUM olacak)
+
+
+PrintManager adında bir class aç
+
+PrintBeden adında bir metot oluştur. void olan bu metot dışarıdan IBeden alacak. ve console a "Bedeniniz " + Bedenno yazacak. Bu metodu console üzerinden herhangi bir classla çalıştır.
+
+PrintKumasTur adında bir metot oluştur. void olan bu metot dışarıdan IKumas alacak. ve console a "Kumaşınız " + KumasTur yazacak. Bu metodu console üzerinden herhangi bir classla çalıştır.

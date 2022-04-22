@@ -1,0 +1,27 @@
+﻿KEYWORDS
+
+abstarct
+virtual
+override
+base
+constructor
+this
+protected
+private
+public
+interface
+
+
+
+
+
+Inheritance
+Intellisense
+Instance
+
+OOP Temel Prensipleri
+Encapsulation
+Inheritance
+
+
+implement
