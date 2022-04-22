@@ -11,6 +11,8 @@ namespace CSharpEntityInterfaceSample.PodCast
         public Single(string name)
         {
             Name = name;
+            Console.WriteLine(name);
+            Console.Read();
         }
         public string Name { get; set; }
         public DateTime AnnouncementDate { get; set; }
