@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CSharpEntityInterfaceSample.PodCast;
+
 namespace CSharpEntityInterfaceSample.PodCast
 {
-    public interface IPlay
+    public class EnumLog
     {
-        void Play(Single singles)
-        {
-
-        }
+        enum Level { Low,Medium, High }
     }
 }

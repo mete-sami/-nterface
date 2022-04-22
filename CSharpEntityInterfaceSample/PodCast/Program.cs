@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using CSharpEntityInterfaceSample.PodCast;
 namespace CSharpEntityInterfaceSample.PodCast
 {
-    public interface IPlay
+    public class Program
     {
-        void Play(Single singles)
+        static void Main(string[] args)
         {
-
+            
+            Single single = new Single("Avici");
         }
     }
 }

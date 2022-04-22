@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSharpEntityInterfaceSample.PodCast
 {
-    public class PlayList:BaseModel
+    public class PlayList:BaseModel,IPieceEntity3
     {
-        public int SingleCount { get; set; }
+        public List<Single> PlayListSings { get; set; }
+        public User User { get; set; }
+        public int PlayListCount { get => PlayListSings.Count(); }
+        public DateTime LastPlayDate { get; set; }
     }
 }

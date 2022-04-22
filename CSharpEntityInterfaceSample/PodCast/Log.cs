@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CSharpEntityInterfaceSample.PodCast;
+
 namespace CSharpEntityInterfaceSample.PodCast
 {
-    public interface IPlay
+    public class Log:BaseModel
     {
-        void Play(Single singles)
-        {
-
-        }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Category { get; set; }
     }
 }

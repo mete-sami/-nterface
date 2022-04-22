@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CSharpEntityInterfaceSample.PodCast;
 namespace CSharpEntityInterfaceSample.PodCast
 {
-    public class Single:BaseModel
+    public class Single:BaseModel,IPieceEntity3,IPlay
     {
         public Single(string name)
         {
@@ -19,6 +19,7 @@ namespace CSharpEntityInterfaceSample.PodCast
                 }
         public DateTime RemainingTime { get; set; }
         Artist artist { get; set; }
+        
     }
     
 }

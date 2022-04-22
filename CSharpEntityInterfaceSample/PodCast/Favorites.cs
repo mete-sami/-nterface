@@ -8,6 +8,7 @@ namespace CSharpEntityInterfaceSample.PodCast
 {
     public class Favorites:BaseModel
     {
-        public string User { get; set; }
+        public User User { get; set; }
+        public List<Single> Singles { get; set; }
     }
 }

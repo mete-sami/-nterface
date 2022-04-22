@@ -8,7 +8,7 @@ namespace CSharpEntityInterfaceSample.PodCast
 {
     public interface IPieceEntity3
     {
-     
+        public DateTime LastPlayDate { get; set; }
 
     }
 }
