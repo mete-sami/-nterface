@@ -11,8 +11,9 @@ namespace CSharpEntityInterfaceSample.PodCast
         static void Main(string[] args)
         {
             
-            Single single = new Single("Avici");
-            
+            Single single = new Single("Aviciii1");
+           
+
         }
     }
 }
