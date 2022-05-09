@@ -1,0 +1,158 @@
+
+--1) Ürünleri ada göre sýrala
+
+select * from Products Order by ProductName
+
+
+--2) Ürünleri ada göre tersten sýrala
+
+select * from Products Order by ProductName desc
+
+--3) Ürün fiyati 20 den büyük ve categoryid si 3 olan ürünleri fiyata göre sirala
+
+select * from Products Where UnitPrice>20 and CategoryID=3 Order by UnitPrice
+
+--4) En pahali 5 ürünü getir
+
+select top 5 * from Products Order by UnitPrice desc
+
+--5) En pahali ürünümün fiyati ne
+
+select top 1 * from Products Order by UnitPrice desc
+
+--6) En ucuz ürünümün fiyati ne
+
+select top 1 * from Products Order by UnitPrice asc
+
+--7) En ucuz ürünümün KDV'li fiyati nedir?
+
+select top 1 UnitPrice*1.18 from Products order by UnitPrice 
+
+--8) 1996 yilindaki sipariþleri getir
+select * from Orders where YEAR(OrderDate)=1996
+
+--9) 1997 yilinin Mart ayinin sipariþlerini getir
+
+select* from Orders Where Year(OrderDate)=1997 and MONTH(OrderDate)=03
+
+--10) ShipCity - 1997 yilinda Londra'ya kaç adet sipariþ gitti?
+
+select COUNT(*) from Orders Where ShipCity='London' and YEAR(OrderDate)=1997
+
+--11) ProductID si 5 olan ürünün kategori adi nedir
+
+select c.CategoryName from Products as p inner join Categories as c on p.CategoryID=c.CategoryID where p.ProductID=5
+
+--12) Ürün adi ve ürünün kategorisinin adi?
+
+select p.ProductName,c.CategoryName from  Products as p inner join Categories as c on p.CategoryID=c.CategoryID
+
+--13) Ürünün adi, kategorisinin adi ve tedarikçisinin adi
+
+select p.ProductName,c.CategoryName,s.ContactName from Products as p inner join Categories as c on p.CategoryID=c.CategoryID inner join  Suppliers as s on s.SupplierID=p.SupplierID
+
+--14) Sipariþi alan personelin adi,soyadi, sipariþ tarihi. Siralama sipariþ tarihine göre
+
+select FirstName,LastName,o.OrderDate from Employees as e inner join Orders o on e.EmployeeID=o.EmployeeID order by OrderDate desc
+
+
+--15) Son 5 sipariþimin ortalama fiyati nedir? (sepet toplami ortalamasi)  
+
+select top 5 AVG(od.Quantity * od.UnitPrice) from [Order Details] as od inner join Orders o on od.OrderID=o.OrderID group by od.OrderID order by od.OrderID 
+
+--16) Ocak ayinda satilan ürünlerimin adi ve kategorisinin adi ve toplam satiþ miktari nedir? Top satýs miktarý?????
+
+select SUM( od.Quantity) from Products as p 
+inner join Categories as c on c.CategoryID = p.CategoryID 
+inner join [Order Details] as od on od.ProductID = p.ProductID
+inner join Orders as ord on ord.OrderID = od.OrderID  where MONTH(OrderDate) = 01
+
+
+--17) Hangi personelim hangi personelime rapor veriyor? (ID)
+
+select es.EmployeeID ,  e.LastName , e.FirstName from Employees	e 
+inner join Employees es on e.EmployeeID = es.ReportsTo
+
+--18) Hangi ülkeden kaç müþterimiz var (distinc ve count kullanilacak) (distinc tekrarlý varsa yazmýyor)
+
+ select DISTINCT country, COUNT(*) as Count from Customers group by Country
+
+--19) Ortalama satiþ miktarimin üzerindeki satiþlarim nelerdir? (order details tablosu) ****
+
+select * from [Order Details] where  Quantity > (select  avg(Quantity) from  [Order Details])
+ 
+--20) En çok satilan ürünümün(adet bazinda) adi, kategorisinin adi ve tedarikçisinin adi (4 tablo birleþimi)  order det. prod. cat. sup.
+
+select top 1 ProductName, CategoryName, ContactName from Products p 
+inner join [Order Details] od on od.ProductID = p.ProductID 
+inner join Categories c on c.CategoryID = p.CategoryID 
+inner join Suppliers s on s.SupplierID = p.SupplierID order by od.Quantity desc
+
+--21) 10248 numarali sipariþi alan çaliþanin adi ve soyadi ve orderid
+
+select e.FirstName, e.LastName ,o.OrderID from Employees e 
+inner join orders o on o.EmployeeID = e.EmployeeID
+where o.OrderID = 10248
+
+
+--22) 1996 yilinda, 5 numarali ID ye sahip çaliþanim kaç adet sipariþ aldi? (count?)
+
+select Sum(Quantity) SiparisAdedi from [Order Details] od 
+inner join orders o on o.OrderID = od.OrderID
+inner join Employees e on e.EmployeeID = o.EmployeeID
+inner join Products p on p.ProductID = od.ProductID
+where YEAR(o.OrderDate) = 1996 and e.EmployeeID =5
+
+
+--23) 1997 yilinda kim ne kadar sipariþ geçti (EmployeeID, Count)
+
+select e.EmployeeID ,SUM(Quantity) SiparisAdedi from [Order Details] od 
+inner join orders o on o.OrderID = od.OrderID
+inner join Employees e on e.EmployeeID = o.EmployeeID
+inner join Products p on p.ProductID = od.ProductID
+where YEAR(o.OrderDate) = 1997 group by e.EmployeeID
+
+
+--24) 10248 numarali sipariþin ürünlerinin adlari ve sipariþ miktari
+
+select p.ProductName , od.Quantity from Products p 
+inner join [Order Details] od on od.ProductID = p.ProductID
+where od.OrderID = 10248
+
+
+--25) 10248 numarali sipariþin toplam fiyati
+
+select SUM(UnitPrice * Quantity) from Orders o  inner join  [Order Details] od on  o.OrderID = od.OrderID where o.OrderID = 10248
+
+
+--26) 1996 yilinda cirom
+
+select SUM(UnitPrice * Quantity) from [Order Details] od inner join Orders o on o.OrderID = od.OrderID where YEAR(o.OrderDate) = 1996
+
+--27) 1996 yilinda en çok ciro yapan employeeID
+
+select top 1 e.EmployeeID ,SUM(od.UnitPrice * od.Quantity) Ciro from [Order Details] od inner join Orders o on o.OrderID = od.OrderID
+inner join Employees e on e.EmployeeID = o.EmployeeID
+where YEAR(o.OrderDate) = 1996 group by e.EmployeeID  order by ciro desc
+
+--28) 1997 Mart ayindaki sipariþlerimin ortalama fiyati nedir?
+
+select AVG(od.UnitPrice * od.Quantity) from [Order Details] od 
+inner join orders o on o.OrderID = od.OrderID
+inner join Products p on p.ProductID = od.ProductID
+where YEAR(o.OrderDate) = 1997 and MONTH(o.OrderDate) = 03
+
+
+
+--29) 1997 yilindaki aylik satiþlari sirala. Ocak - 500 gibi toplamda 12 satir olacak
+
+select MONTH(o.OrderDate) Ay, sum(od.UnitPrice * od.Quantity) Satis from [Order Details] od 
+inner join Orders o on o.OrderID = od.OrderID 
+where YEAR(o.OrderDate) = 1997 Group by MONTH(o.OrderDate) order by (MONTH(o.OrderDate))
+
+--30) En deðerli MÜÞTERÝMÝN adi ve soyadi (orders,orderdetails,customers)
+
+select c.ContactName , sum(od.UnitPrice * od.Quantity) Tutar  from Customers c 
+inner join Orders o on o.CustomerID = c.CustomerID 
+inner join [Order Details] od on od.OrderID = o.OrderID 
+group by c.ContactName order by Tutar desc

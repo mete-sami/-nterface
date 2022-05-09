@@ -1,36 +1,42 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32414.318
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpOOP", "CSharpOOP\CSharpOOP.csproj", "{75389F19-28A4-4302-B7E0-D4D43DAB7E03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpOOP", "CSharpOOP\CSharpOOP.csproj", "{75389F19-28A4-4302-B7E0-D4D43DAB7E03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleOOPSample", "VehicleOOPSample\VehicleOOPSample.csproj", "{D988B2DF-9EA5-4AC8-9F8B-0C776AEAB981}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleOOPSample", "VehicleOOPSample\VehicleOOPSample.csproj", "{D988B2DF-9EA5-4AC8-9F8B-0C776AEAB981}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmlakSample", "EmlakSample\EmlakSample.csproj", "{2487ABCA-E73B-4E06-A5A3-D895FAC28A54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmlakSample", "EmlakSample\EmlakSample.csproj", "{2487ABCA-E73B-4E06-A5A3-D895FAC28A54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpObjectVarDynamic", "CSharpObjectVarDynamic\CSharpObjectVarDynamic.csproj", "{CE8DFB57-77CB-4CA0-9A45-68C21B23D9E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpObjectVarDynamic", "CSharpObjectVarDynamic\CSharpObjectVarDynamic.csproj", "{CE8DFB57-77CB-4CA0-9A45-68C21B23D9E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpInterfaceSample", "CSharpInterfaceSample\CSharpInterfaceSample.csproj", "{F2F90A8C-E5DE-46A5-AE16-5D64506DA2AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpInterfaceSample", "CSharpInterfaceSample\CSharpInterfaceSample.csproj", "{F2F90A8C-E5DE-46A5-AE16-5D64506DA2AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpGameInterfaceSample", "CSharpGameInterfaceSample\CSharpGameInterfaceSample.csproj", "{AB202ED8-8AA0-4510-AA21-0D2774A02F03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpGameInterfaceSample", "CSharpGameInterfaceSample\CSharpGameInterfaceSample.csproj", "{AB202ED8-8AA0-4510-AA21-0D2774A02F03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpAnimalInterfaceSample", "CSharpAnimalInterfaceSample\CSharpAnimalInterfaceSample.csproj", "{2B2DB0CE-802E-4172-A6EE-46E23CAE8595}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAnimalInterfaceSample", "CSharpAnimalInterfaceSample\CSharpAnimalInterfaceSample.csproj", "{2B2DB0CE-802E-4172-A6EE-46E23CAE8595}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PodCast", "CSharpEntityInterfaceSample\PodCast.csproj", "{0D39EF23-E621-411E-B61F-D7324F962E51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpEntityInterfaceSample", "CSharpEntityInterfaceSample\CSharpEntityInterfaceSample.csproj", "{0D39EF23-E621-411E-B61F-D7324F962E51}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsharpProductInterfaceSample", "CsharpProductInterfaceSample\CsharpProductInterfaceSample.csproj", "{CB589342-11EA-4BC4-B8AA-9656CF058AE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpProductInterfaceSample", "CsharpProductInterfaceSample\CsharpProductInterfaceSample.csproj", "{CB589342-11EA-4BC4-B8AA-9656CF058AE0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryCatch", "TryCatch\TryCatch.csproj", "{A5B38C16-BA3A-4B4F-B212-140A9A77BA29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatch", "TryCatch\TryCatch.csproj", "{A5B38C16-BA3A-4B4F-B212-140A9A77BA29}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{811AF7A8-E95A-40F8-BBE1-E86C8E20820A}"
 	ProjectSection(SolutionItems) = preProject
 		CSharpOOP.sln = CSharpOOP.sln
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpEnum", "CSharpEnum\CSharpEnum.csproj", "{D7BBF082-37CC-4C65-A0DA-677127673A65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpEnum", "CSharpEnum\CSharpEnum.csproj", "{D7BBF082-37CC-4C65-A0DA-677127673A65}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Podcast", "Podcast", "{8318D36D-1988-49E5-A896-6DCCD85DFF29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpExtensionSample", "CSharpExtensionSample\CSharpExtensionSample.csproj", "{2D5B7B3A-9172-4418-B38F-14627DC0975E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpDictionarySample", "CSharpDictionarySample\CSharpDictionarySample.csproj", "{C5D64623-8EAC-489E-BA5D-CEEDACE9BA25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpWriteReadFile", "CSharpWriteReadFile\CSharpWriteReadFile.csproj", "{F2830825-B7BA-411F-A7CD-12A7BA7D7966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpAdoNet", "CsharpAdoNet\CsharpAdoNet.csproj", "{8A6774B1-8FED-4789-9836-2D1AE5906E71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,12 +88,25 @@ Global
 		{D7BBF082-37CC-4C65-A0DA-677127673A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7BBF082-37CC-4C65-A0DA-677127673A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7BBF082-37CC-4C65-A0DA-677127673A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D5B7B3A-9172-4418-B38F-14627DC0975E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D5B7B3A-9172-4418-B38F-14627DC0975E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D5B7B3A-9172-4418-B38F-14627DC0975E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D5B7B3A-9172-4418-B38F-14627DC0975E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5D64623-8EAC-489E-BA5D-CEEDACE9BA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D64623-8EAC-489E-BA5D-CEEDACE9BA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D64623-8EAC-489E-BA5D-CEEDACE9BA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D64623-8EAC-489E-BA5D-CEEDACE9BA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2830825-B7BA-411F-A7CD-12A7BA7D7966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2830825-B7BA-411F-A7CD-12A7BA7D7966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2830825-B7BA-411F-A7CD-12A7BA7D7966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2830825-B7BA-411F-A7CD-12A7BA7D7966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A6774B1-8FED-4789-9836-2D1AE5906E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A6774B1-8FED-4789-9836-2D1AE5906E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A6774B1-8FED-4789-9836-2D1AE5906E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A6774B1-8FED-4789-9836-2D1AE5906E71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{8318D36D-1988-49E5-A896-6DCCD85DFF29} = {811AF7A8-E95A-40F8-BBE1-E86C8E20820A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2642C3C-86A2-4F63-A9C4-457BE7EB12F9}

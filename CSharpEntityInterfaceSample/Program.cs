@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CSharpEntityInterfaceSample.PodCast;
-using Single = CSharpEntityInterfaceSample.PodCast.Single;
 
 namespace CSharpEntityInterfaceSample
 {
@@ -12,7 +6,13 @@ namespace CSharpEntityInterfaceSample
     {
         static void Main(string[] args)
         {
-            Single single = new Single("Avicis");
+            Product product = new Product();
+            product.Name = "IPhone";
+            product.SortNumber = 1;
+
+            ECommerceManager eCommerceManager = new ECommerceManager();
+
+            int result = eCommerceManager.SortData(product);
         }
     }
 }
